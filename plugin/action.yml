@@ -1,0 +1,13 @@
+name: "Setup Claude Code"
+description: Sets up Claude Code CLI in your GitHub Actions workflow.
+inputs:
+  version:
+    description: Version of Claude Code to install. Supports npm version ranges. Use 'latest' for the most recent release.
+    required: false
+    default: latest
+  anthropic-api-key:
+    description: Your Anthropic API key used to authenticate Claude Code.
+    required: false
+runs:
+  using: node20
+  main: dist/index.js
